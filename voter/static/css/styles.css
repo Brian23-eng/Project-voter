@@ -26,6 +26,14 @@
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.navbar-nav {
+li {
     list-style-type: none;
+}
+
+.reg {
+    padding-top: 30px;
+}
+
+.up {
+    padding-top: 20px;
 }
