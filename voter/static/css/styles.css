@@ -25,3 +25,7 @@
     font-size: 45px;
     font-family: 'Open Sans Condensed', sans-serif;
 }
+
+.navbar-nav {
+    list-style-type: none;
+}
