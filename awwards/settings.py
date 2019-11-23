@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pyuploadcare.dj',
     'bootstrap4',
     'voter.apps.VoterConfig',
     'django.contrib.admin',
@@ -40,6 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+
+UPLOADCARE = {
+    'pub_key': '2968798e380535492bc8',
+    'secret': 'f3dd74aea4c329e51ee7',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
