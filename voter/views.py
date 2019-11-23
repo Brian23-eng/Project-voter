@@ -1,7 +1,9 @@
 from django.shortcuts import render,redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Profile, Post, Rating
+from rest_framework import viewsets
 from . forms import PostForm, UpdateUserProfileForm,UpdateUserForm, RatingsForm
+from .serializer import PostSerializer, ProfileSerializer, UserSerializer
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
@@ -30,3 +32,19 @@ def home(request):
         posts = None
             
     return render(request,'home.html', {'posts':posts, 'forms':form, 'random_post':random_post})
+
+
+
+class ProfileViewSet(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+    
+    
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+
+class PostViewSet(viewsets.ModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
