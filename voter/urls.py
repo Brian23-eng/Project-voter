@@ -21,6 +21,5 @@ urlpatterns=[
     url(r'^project/(?P<post>\w+)', views.project, name='project'),
     url(r'^search/', views.search_project, name='search'),
     url(r'^postImage/',views.post_image,name='postImage'),
-#    url(r'^logout/$', views.logoutView, name='logout'),
 ]
 
