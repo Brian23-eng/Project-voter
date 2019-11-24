@@ -1,5 +1,5 @@
 {% load crispy_forms_tags %}
-<nav class="navbar fixed-top navbar-expand-lg navbar-light scrolling-navbar  " style="background-color:#F7F9F9;border-bottom:#566573;height:15vh;">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light scrolling-navbar  " style="background-color:black;border-bottom:#566573;height:15vh;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,11 +8,11 @@
 
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/" id="home">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/" id="home" style="color:white;">Home<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class=" btn btn-default nav-link" href="" id="site" data-toggle="modal" data-target=".bd-example-modal-xl">Submit site</a>
-            </li>
+            <button class="btn btn-sm btn-info" id="site" data-toggle="modal" data-target=".bd-example-modal-xl">
+                    Submit your site
+                </button>
         </ul>
 
         {% if user.is_authenticated %}
@@ -33,8 +33,8 @@
         </li>
         {% else %}
         <li>
-            <a class='btn btn-default log' href="/accounts/login">Login</a>
-            <a class='btn btn-default reg' href="/accounts/register">Register</a>
+            <a class='btn btn-sm btn-info log' href="/accounts/login">Login</a>
+            <a class='btn btn-sm btn-info reg' href="/accounts/register">Register</a>
         </li>
         {% endif %}
         <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
@@ -43,3 +43,9 @@
         </form>
     </div>
 </nav>
+
+<script>
+    $('#myModal').on('shown.bs.modal', function() {
+        $('#myInput').trigger('focus')
+    })
+</script>

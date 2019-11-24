@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %} {% load crispy_forms_tags %}{% block content %}
+{% extends 'base.html' %} {% load static %}{% load crispy_forms_tags %}{% block content %}
 <div class="container-fluid">
     <div class="content-view">
         <div class="">
@@ -50,7 +50,7 @@
     </div>
 
     <div class="container">
-        <h2 class="mt-4">Submited Websites</h2>
+        <h2 class="mt-4">Submitted Websites</h2>
         {% if user.is_authenticated %}
         <div class="modal fade bd-example-modal-xl" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -58,15 +58,15 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Upload a project</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                     </div>
                     <div class="modal-body">
                         <form action="" method="post" enctype="multipart/form-data">
                             {% csrf_token %} {{ form|crispy }}
                             <input type="submit" class="btn btn-sm btn-info" value="Save" />
                             <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Close
-                            </button>
+                                </button>
                         </form>
                     </div>
                 </div>
@@ -103,6 +103,5 @@
         </div>
     </div>
 </div>
-
 
 {% endblock %}
