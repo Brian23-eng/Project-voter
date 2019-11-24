@@ -1,4 +1,4 @@
-{% load crispy_forms_tags %}
+{% load crispy_forms_tags %}{{ form.media }}
 <nav class="navbar fixed-top navbar-expand-lg navbar-light scrolling-navbar  " style="background-color:black;border-bottom:#566573;height:15vh;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@
         {% endif %}
         <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="title">
-            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <button class="btn btn-default btn-sm my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
     </div>
 </nav>

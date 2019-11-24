@@ -7,38 +7,38 @@
 
                 </a>
             </div>
-            <div class="box-content over mi" style="background-image:url('http://static.showit.co/1200/lUngeiLrRJCJ76gPPrH_Jw/56885/michelle_lindsay_photography_washington_dc_maternity_and_newborn_photographer_0001.jpg'); background-repeat: no-repeat;">
+            <div class="box-content over mi" style="background-image:linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)),url('https://press-start.com.au/wp-content/uploads/2019/02/Sekiro-Story-Trailer.jpg'); background-repeat: no-repeat;">
                 <a href="" class="site-link" aria-label=""></a>
                 <div class="inner vertical-center">
                     <div class="box-info">
-                        <div class="hae">
-                            <h2>Care</h2>
+                        <div>
+                            <h2 class="hae">Care</h2>
                         </div>
+
                         <div class="by">
-                            <div>
-                                by <strong>Ken Harts
+                            by <strong><span class="ha">Ken Harts</span> 
                                         </strong> from <strong>Nairobi</strong>
-                            </div>
+
                         </div>
                         <div class="row">
                             <div class="col-md-3">
-                                <p class="">8.3</p>
-                                <h3>DESIGN</h3>
+                                <p class="rate1">8.3</p>
+                                <h3 class="des">DESIGN</h3>
 
                             </div>
                             <div class="col-md-3">
-                                <p class="">8.5</p>
-                                <h3>USABILITY</h3>
+                                <p class="rate2">8.5</p>
+                                <h3 class="des">USABILITY</h3>
 
                             </div>
                             <div class="col-md-3">
-                                <p class="">7.3</p>
-                                <h3>CONTENT</h3>
+                                <p class="rate3">7.3</p>
+                                <h3 class="des">CONTENT</h3>
 
                             </div>
                             <div class="col-md-3">
-                                <p class="">8.0</p>
-                                <h3>SCORE</h3>
+                                <p class="rate4">8.0</p>
+                                <h3 class="des">SCORE</h3>
 
                             </div>
 
@@ -50,6 +50,7 @@
     </div>
 
     <div class="container">
+        {{ form.media }}
         <h2 class="mt-4">Submitted Websites</h2>
         {% if user.is_authenticated %}
         <div class="modal fade bd-example-modal-xl" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

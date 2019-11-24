@@ -53,31 +53,53 @@ li {
     text-align: center;
 }
 
-
-/* .des,
-.des1,
-.des2,
-.des3 {
-    color: white;
-    border-radius: 50%;
-    height: 78px;
-    width: 78px;
-    padding-top: 30%;
-    font-size: 17px;
-}
-
 .des {
-    border: 3px solid orange;
+    font-size: 15px;
 }
 
-.des1 {
-    border: 3px solid brown;
+.rate1,
+.rate2,
+.rate3,
+.rate4 {
+    height: 100px;
+    width: 100px;
+    display: absolute;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    padding: 20%;
+    border: solid;
 }
 
-.des2 {
-    border: 3px solid blue;
+.rate1 {
+    border-color: orange;
 }
 
-.des3 {
-    border: 3px solid green;
-} */
+.rate2 {
+    border-color: red;
+}
+
+.rate3 {
+    border-color: blue;
+}
+
+.rate4 {
+    border-color: green;
+}
+
+.hae {
+    font-size: 70px;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.by {
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.ha {
+    color: #0B5345;
+    font-weight: bolder;
+}
