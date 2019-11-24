@@ -11,24 +11,10 @@ import random
 
 
 def home(request):
-    if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.user = request.user
-            post.save()
-            
-    else:
-        form = PostForm()
-        
-    try:
-        posts = Post.objects.all()
-    except Post.DoesNotExist:
-        posts = None
-    return render(request, 'home.html')
+    posts = Post. all_posts()
+    return render(request, 'home.html', {'posts':posts})
 
 
-@login_required(login_url='/accounts/login/')
 def post_image(request):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
