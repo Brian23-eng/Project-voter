@@ -148,5 +148,5 @@ def search_project(request):
 def logoutView(request):
     if request.method == 'POST':
         logout(request)
-        print('logout done')
+        print('loged out')
     return render(request, 'home.html')

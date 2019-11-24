@@ -20,6 +20,6 @@ urlpatterns=[
     url(r'^profile/(?P<username>)\w+', views.edit_profile, name='edit'),
     url(r'^project/<post>', views.project, name='project'),
     url(r'^search/', views.search_project, name='search'),
-   url(r'^logout/$', views.logoutView, name='logout'),
+#    url(r'^logout/$', views.logoutView, name='logout'),
 ]
 
