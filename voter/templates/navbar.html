@@ -17,7 +17,7 @@
 
         {% if user.is_authenticated %}
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username|title }} <img class="rounded-circle nav-img"
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="user">{{ user.username|title }}</span> <img class="rounded-circle nav-img"
                                                                         src="{{ user.profile.profile_picture.url }}"
                                                                         alt="">
                 </a>
