@@ -144,6 +144,9 @@ def search_project(request):
         message = "You haven't searched for any image category"
     return render(request, 'results.html', {'message': message})
 
-
-
-
+@login_required
+def logoutView(request):
+    if request.method == 'POST':
+        logout(request)
+        print('logout done')
+    return render(request, 'home.html')
