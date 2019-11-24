@@ -10,7 +10,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/" id="home" style="color:white;">Home<span class="sr-only">(current)</span></a>
             </li>
-            <button class="btn btn-sm btn-info" id="site" data-toggle="modal" data-target=".bd-example-modal-xl">
+            <button class="btn btn-sm btn-info" id="site" href="{%url 'postImage'%}" data-toggle="modal" data-target=".bd-example-modal-xl">
                     Submit your site
                 </button>
         </ul>
@@ -24,9 +24,9 @@
             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item text-center" href="{% url 'profile' user.username %}">Profile</a>
                 <hr>
-                <a class="dropdown-item text-center" href="{% url 'edit' user.username  %}"> Edit profile</a>
+                <a class="dropdown-item text-center" href="{% url 'edit' user.username %}"> Edit profile</a>
                 <hr>
-                <a href="/logout" class="text-secondary text-center dropdown-item">Log Out</a>
+                <a href="/logout" class="text-center dropdown-item">Log Out</a>
 
 
             </div>

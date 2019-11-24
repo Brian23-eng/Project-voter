@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from pyuploadcare.dj.models import  ImageField
 import datetime as dt
 
 
@@ -35,7 +34,7 @@ class Post(models.Model):
     url = models. CharField(max_length=255)
     description = models.TextField(max_length=500)
     technologies = models.CharField(max_length=255, blank=True)
-    photo = models.ImageField(upload_to='project_images', blank=True)
+    photo = models.ImageField( blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
     date = models.DateField(auto_now_add=True, blank=True)
     
@@ -53,11 +52,12 @@ class Post(models.Model):
 
     @classmethod
     def all_posts(cls):
-        return cls.objects.all()
+        posts = Post.objects.all()
+        return posts
 
     def save_post(self):
         self.save()
-    
+        
     
 class Rating(models.Model):
     rating = (

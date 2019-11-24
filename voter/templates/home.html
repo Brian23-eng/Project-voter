@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load static %}{% load crispy_forms_tags %}{% block content %}
+{% extends 'base.html' %} {% load static %}{% load crispy_forms_tags %}{% block content %}{{ form.media }}
 <div class="container-fluid">
     <div class="content-view">
         <div class="">
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         {{ form.media }}
         <h2 class="mt-4">Submitted Websites</h2>
         {% if user.is_authenticated %}
@@ -75,34 +75,34 @@
         </div>
         {% endif %}
         <div class="row">
-            {% if posts %}
+            {% if posts %} -->
 
-            <div class="templates display">
-                {% for post in posts %}
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="view overlay">
-                            <img class="card-img-top" src="{{ post.photo.cdn_url }}" alt="{{photo.title}}">
-                            <a href="{% url 'project' post.title %}">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title"><a href="{% url 'project' post.title %}">{{post.title|title}}</a> <a class="btn btn-sm btn-outline-info" href="{{ post.url }}"> View</a></h4>
-                            <hr>
-                            <p class="card-text "><img src="{{post.user.profile.profile_picture.url}}" class="nav-img mr-2" alt=""> By {{post.user.username|title}} <span style="float:right">{{post.date|date}}</span>
-
-
-                            </p>
-                        </div>
-                    </div>
+    <div class="templates display">
+        {% for post in posts %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="view overlay">
+                    <img class="card-img-top" src="{{ post.photo.cdn_url }}" alt="{{photo.title}}">
+                    <a href="{% url 'project' post.title %}">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
                 </div>
-                {% endfor %}
-            </div>
+                <div class="card-body">
+                    <h4 class="card-title"><a href="{% url 'project' post.title %}">{{post.title|title}}</a> <a class="btn btn-sm btn-outline-info" href="{{ post.url }}"> View</a></h4>
+                    <hr>
+                    <p class="card-text "><img src="{{post.user.profile.profile_picture.url}}" class="nav-img mr-2" alt=""> By {{post.user.username|title}} <span style="float:right">{{post.date|date}}</span>
 
-            {% endif %}
+
+                    </p>
+                </div>
+            </div>
         </div>
+        {% endfor %}
     </div>
+
+    {% endif %}
+</div>
+</div>
 </div>
 
 {% endblock %}
