@@ -14,7 +14,7 @@ router.register('profile', views.ProfileViewSet)
 urlpatterns=[
     url('^$', views.home, name='home'),
     url(r'^api/', include(router.urls)),
-    url(r'^<username>/profile', views.user_profile, name='userprofile'),
+    url(r'^profile/(?P<username>\w+)', views.user_profile, name='userprofile'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^profile/(?P<username>\w+)',views.profile,name='profile'),
     url(r'^profile/(?P<username>\w+)/settings', views.edit_profile, name='edit'),

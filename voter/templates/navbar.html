@@ -10,9 +10,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/" id="home" style="color:white;">Home<span class="sr-only">(current)</span></a>
             </li>
-            <button class="btn btn-sm btn-info" id="site" href="{%url 'postImage'%}">
-                    Submit your site
-                </button>
+            <button class="btn btn-sm btn-info" id="site"><a href="{%url 'postImage'%}"> Submit your site</a> </button>
+
+
         </ul>
 
         {% if user.is_authenticated %}
