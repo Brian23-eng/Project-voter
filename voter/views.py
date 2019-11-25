@@ -9,7 +9,6 @@ from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 import random   
 
-
 def home(request):
     posts = Post. all_posts()
     return render(request, 'home.html', {'posts':posts})
