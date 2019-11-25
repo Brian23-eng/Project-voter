@@ -10,7 +10,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/" id="home" style="color:white;">Home<span class="sr-only">(current)</span></a>
             </li>
-            <button class="btn btn-sm btn-info" id="site"><a href="{%url 'postImage'%}"> Submit your site</a> </button>
+            <button class="btn btn-sm btn-info"><a href="{%url 'postImage'%}"><span class="site">Submit your site</span></a> </button>
 
 
         </ul>
@@ -18,13 +18,13 @@
         {% if user.is_authenticated %}
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="user">{{ user.username|title }}</span> <img class="rounded-circle nav-img"
-                                                                        src="{{ user.profile.profile_picture.url }}"
+                                                                        src="{{ user.profile. }}"
                                                                         alt="">
                 </a>
             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item text-center" href="{% url 'profile' user.username %}">Profile</a>
                 <hr>
-                <a class="dropdown-item text-center" href="{% url 'edit' user.username %}"> Edit profile</a>
+                <a class="dropdown-item text-center" href="{% url 'userprofile' user.username %}"> Edit profile</a>
                 <hr>
                 <a href="/logout" class="text-center dropdown-item">Log Out</a>
 
