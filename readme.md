@@ -59,16 +59,16 @@ python manage.py runserver
 Open the application on your browser `127.0.0.1:8000`.  
   
  ### Api Endpoints
- * https://chawwards.herokuapp.com/api/users/
+ <!-- * https://chawwards.herokuapp.com/api/users/
  * https://chawwards.herokuapp.com/api/profile/
- * https://chawwards.herokuapp.com/api/posts/
+ * https://chawwards.herokuapp.com/api/posts/ -->
  
  
 ## Technology used  
   
-<!-- * [Python3.6](https://www.python.org/)  
+* [Python3.6](https://www.python.org/)  
 * [Django 1.11](https://docs.djangoproject.com/en/2.2/)  
-* [Heroku](https://heroku.com)   -->
+* [Heroku](https://heroku.com)  
   
   
 ## Known Bugs  
