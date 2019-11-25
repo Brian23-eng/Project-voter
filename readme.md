@@ -79,5 +79,5 @@ If you have any question or contributions, please email me at [b.odhiambo.bo@gma
   
 ## License 
 
-* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/Owiti-Charles/Picture-Globe/blob/master/LICENSE)  
+* [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/brian23-eng/Picture-Globe/blob/master/LICENSE)  
 * Copyright (c) 2019 **BranTech**
