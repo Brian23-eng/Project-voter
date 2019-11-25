@@ -3,8 +3,8 @@
     <h5 class="mb-4 mt-4">{{ post.title }} by {{ post.user.username }} from {{ post.user.profile.location }} <span id="heart"> <i class="fas fa-heart"></i></span></h5>
 
     <div class="card">
-        <div class="view overlay" style="background-image:url('{{ post.photo.cdn_url }}')">
-            <img class="card-img-top" style="visibility:hidden" width="100%" src="{{ post.photo.cdn_url }}-/crop/1440x720/center/-/quality/lightest/" alt="{{photo.title}}">
+        <div class="view overlay" style="background-image:url('{{ post.photo.url }}')">
+            <img class="card-img-top" style="visibility:hidden" width="100%" src="{{ post.photo.url }}-/crop/1440x720/center/-/quality/lightest/" alt="{{photo.title}}">
             <a href="">
                 <div class="mask rgba-black-slight">
                     <div class="container">
