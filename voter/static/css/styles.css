@@ -111,3 +111,14 @@ li {
 .site {
     color: white;
 }
+
+.copy {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.intro {
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+}
